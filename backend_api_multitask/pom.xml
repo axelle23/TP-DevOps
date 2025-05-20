@@ -12,7 +12,7 @@
 	<artifactId>simpleapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>simpleapi</name>
-	<description>Simple example </description>
+	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
