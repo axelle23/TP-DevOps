@@ -1,0 +1,45 @@
+version: "3.8"
+services:
+    backend:
+        build: 
+          context: "./backend_api_multitask"
+        #TODO
+        networks: 
+          - devops-network
+        ports:
+          - "8980:8080"
+        #TODO
+        depends_on: 
+          - database
+
+    database:
+        build: 
+          context: "./postgres"
+        #TODO
+        networks: 
+          - devops-network
+        ports:
+          - "5432:5432"
+        environment:
+          POSTGRES_PASSWORD: we4reDATA
+        #TODO
+
+    httpd:
+        build: 
+          context: "./backend_api_multitask/src/main/HTTP"
+        #TODO
+        ports:
+          - "8082:80"
+        #TODO
+        networks: 
+          - devops-network
+        #TODO
+        depends_on:
+          - backend
+        
+
+networks:
+  devops-network:
+
+volumes:
+  postgres_volume:
