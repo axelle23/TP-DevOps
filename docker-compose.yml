@@ -15,14 +15,12 @@ services:
     database:
         build: 
           context: "./postgres"
-        #TODO
         networks: 
           - devops-network
         ports:
           - "5432:5432"
         environment:
           POSTGRES_PASSWORD: we4reDATA
-        #TODO
 
     httpd:
         build: 
