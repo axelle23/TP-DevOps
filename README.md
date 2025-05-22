@@ -1,3 +1,5 @@
+Ce projet représente principalement le premier TP DevOps, vous pouvez voir le deuxième et troisième TP sur le repo suivant : https://github.com/axelle23/tp-devops-correction-docker.git
+
 # 📁 Structure du projet
 Ce projet est une architecture simple de déploiement d'une API avec une interface web statique, une base de données PostgreSQL, le tout orchestré avec Docker et déployé via Ansible.
 
