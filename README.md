@@ -38,34 +38,7 @@ README.md : explications sur la configuration du service de base de données.
 🧩 docker-compose.yml (à la racine)
 Ce fichier orchestration globale Docker peut servir à lancer tous les services (backend_api_basic, backend_api_multitask, postgres) en un seul appel :
 
-bash
-Copier
-Modifier
-docker-compose up --build
+`docker-compose up --build`
+
 Il est utile pour tester l'ensemble du projet en local avant un déploiement distant.
 
-# 🚀 Déploiement avec Ansible
-Le projet est conçu pour être déployé automatiquement sur un serveur distant (ex. axelle.brosse.takima.cloud) via Ansible et GitHub Actions.
-
-# 📁 Dossiers Ansible typiques (à ajouter si ce n’est pas fait) :
-ansible/inventories/setup.yml : inventaire Ansible (liste des hôtes).
-
-ansible/playbook.yml : liste des tâches à exécuter (copie des fichiers, installation Docker, lancement de containers...).
-
-# ⚙️ CI/CD avec GitHub Actions
-Un fichier deploy.yml dans .github/workflows/ permet de déclencher le déploiement à chaque push sur main, en :
-
-Se connectant au serveur distant via SSH.
-
-Transférant les fichiers.
-
-Exécutant ansible-playbook.
-
-# ✅ Prérequis
-Java installé pour backend_api_basic
-
-Docker & Docker Compose
-
-Clé SSH privée dans les secrets GitHub (ID_RSA)
-
-Serveur distant accessible (ex: axelle.brosse.takima.cloud)
